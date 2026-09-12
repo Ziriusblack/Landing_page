@@ -240,3 +240,37 @@ footer {
     width: auto;
     display: block;
 }
+/* Responsive / Vista Móvil */
+@media (max-width: 768px) {
+    /* Navbar adaptada */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 5%;
+    }
+
+    .navbar nav a {
+        margin: 0 0.75rem;
+    }
+
+    /* Hero con menor espaciado en móviles */
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Las cards se apilan verticalmente en pantallas pequeñas */
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap; /* Permite que salten de línea */
+    }
+
+    .card {
+        width: 100%;        /* Ocupan todo el ancho disponible */
+        max-width: 400px;   /* Para que no se vean gigantes en celulares grandes */
+    }
+}
