@@ -1,0 +1,91 @@
+<!-- Entregado por Alexander chiquillo y Wilson otero -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusStudent - Organiza tu tiempo de estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="util/logo.png" alt="Logo FocusStudent" class="logo-img">
+            <span class="logo-text"></span>
+        </div>
+        <nav>
+            <a href="#problema">El Problema</a>
+            <a href="#solucion">La Solucion</a>
+            <a href="#beneficios">Beneficios</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Toma el control de tu vida academica sin estres</h1>
+                <p>La herramienta disenada por y para estudiantes universitarios. Organiza tus entregas, optimiza tus sesiones de estudio y recupera tu tiempo libre.</p>
+                <a href="#registro" class="cta-button">Quiero probar la version Beta</a>
+            </div>
+        </section>
+
+        <section id="problema" class="section">
+            <h2>El Problema</h2>
+            <p class="section-desc">Acumulacion de tareas a ultima hora, desorganizacion con las fechas de examenes y la constante sensacion de no llegar a tiempo. Estudiar no deberia sentirse como un caos permanente.</p>
+        </section>
+
+        <section id="solucion" class="section alt-bg">
+            <h2>Nuestra Solucion</h2>
+            <p class="section-desc">FocusStudent centraliza tu calendario, prioriza tus entregas de forma automatica y te guia en sesiones de estudio enfocadas para que rindas mas en menos tiempo.</p>
+        </section>
+
+       <section id="beneficios" class="section">
+        <h2>¿Por que FocusStudent?</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon-wrapper">📅</div>
+                <h3>Planificacion Inteligente</h3>
+                <p>Organiza tus entregas y examenes automaticamente segun su prioridad y nivel de dificultad.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-wrapper">⏱️</div>
+                <h3>Bloques de Enfoque</h3>
+                <p>Temporizadores integrados basados en tecnicas comprobadas para mantener la concentracion sin agotamiento.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-wrapper">📊</div>
+                <h3>Estadisticas de Rendimiento</h3>
+                <p>Visualiza tu progreso semanal y descubre en que horarios rinden mas tus horas de estudio.</p>
+             </div>
+            </div>
+        </section>
+
+        <section id="registro" class="cta-section">
+            <h2>Se de los primeros en probarlo</h2>
+            <p>Estamos construyendo la beta y buscando estudiantes que quieran validar la herramienta.</p>
+            <button class="cta-button large" onclick="alert('¡Gracias por tu interes! Te avisaremos cuando la beta este lista.')">Quiero unirme a la lista de espera</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FocusStudent - Proyecto de Validacion de Idea</p>
+    </footer>
+
+    <script>
+        // JS Base para desplazamiento suave al hacer clic en el menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
