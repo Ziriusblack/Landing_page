@@ -242,35 +242,50 @@ footer {
 }
 /* Responsive / Vista Móvil */
 @media (max-width: 768px) {
-    /* Navbar adaptada */
+    /* Navbar compacta */
     .navbar {
         flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.8rem 5%;
+    }
+
+    /* Forzar que las 3 opciones del menú permanezcan alineadas en UNA sola fila */
+    .navbar nav {
+        display: flex;
+        justify-content: center;
         gap: 1rem;
-        padding: 1rem 5%;
+        width: 100%;
     }
 
     .navbar nav a {
-        margin: 0 0.75rem;
+        margin: 0; /* Limpiamos márgenes anteriores */
+        font-size: 0.9rem; /* Reducimos ligeramente la fuente para que quepan holgados */
+        white-space: nowrap; /* Evita que el texto de una opción se parta */
     }
 
-    /* Hero con menor espaciado en móviles */
+    /* Mayor margen de desplazamiento superior para no tapar el título */
+    .section {
+        scroll-margin-top: 140px; /* Compensación para la altura de la navbar móvil */
+    }
+
+    /* Hero ajustado a móviles */
     .hero {
-        padding: 4rem 1rem;
+        padding: 3.5rem 1rem;
     }
 
     .hero h1 {
         font-size: 1.8rem;
     }
 
-    /* Las cards se apilan verticalmente en pantallas pequeñas */
+    /* Las cards se apilan verticalmente de forma limpia */
     .cards-grid {
         flex-direction: column;
         align-items: center;
-        flex-wrap: wrap; /* Permite que salten de línea */
+        flex-wrap: wrap;
     }
 
     .card {
-        width: 100%;        /* Ocupan todo el ancho disponible */
-        max-width: 400px;   /* Para que no se vean gigantes en celulares grandes */
+        width: 100%;
+        max-width: 400px;
     }
 }
